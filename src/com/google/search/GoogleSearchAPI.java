@@ -91,7 +91,7 @@ public class GoogleSearchAPI {
 	
 	private static String readConfig() {
 		StringBuilder sb = new StringBuilder();
-		String filePath = "config.txt";
+		String filePath = "client_secret.json";
 		BufferedReader reader = null;
 
 		try {
@@ -102,7 +102,7 @@ public class GoogleSearchAPI {
 				sb.append(str);
 			}
 		} catch (Exception e) {
-			System.err.println("Please create your config.txt with your google server key in JSON format:");
+			System.err.println("Please create your client_secret.json with your google server key in JSON format:");
 			System.err.println("{\"serverkey\": \"your google server key\"}");
 //			e.printStackTrace();
 		} finally {
